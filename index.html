@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/logo.jpg" type="image/jpg">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="scripts/default.js"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <title>Shop - KofKaN Technologies</title>
+</head>
+<body>
+  <my-taskbar></my-taskbar>
+  <my-header></my-header>
+  <main>
+      <div dataTarget="home" class="product-section"></div>
+      <div id="errorMsg"></div>
+  </main>
+  <my-footer></my-footer>
+
+  <script src="scripts/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1500,
+    once: false
+  });
+  </script>
+</body>
+
+</html>

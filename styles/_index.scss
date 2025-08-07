@@ -1,0 +1,185 @@
+html{
+    width: 100vw;
+    // height: 100vh;
+    overflow-x: hidden;
+    background: var(--background);
+    position: relative;
+}
+body{
+    width: 100%;
+    // min-height: 100vh;
+    overflow-y: auto;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px;
+    // margin-top: 70px;
+}
+.product-section {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    margin: auto;
+}
+
+/* Product card styling */
+.product-card {
+    background: rgb(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 97%; 
+    backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Image container */
+.product-img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+    margin: 0;
+}
+
+/* Image styling */
+.product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* Text styling */
+.product-name {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    flex-grow: 1; /* Pushes price and button down */
+}
+
+.product-price {
+    color: var(--text-add);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+/* Button styling */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--text-secondary);
+    color: white;
+    border: none;
+    margin: 10px auto;
+    border-radius: 6px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: var(--text-primary);
+    color: var(--text-secondary);
+    border: inset 2px var(--text-secondary);
+    font-weight: 800;
+
+}
+@media (min-width: 769px){
+    body{
+        font-size: 115%;
+    }
+    header{
+        width: 100%;
+        height: 70px;
+        padding: 20px 0;
+        font-size: 80%;
+        .company{
+            .comName{
+                font-size: 100%;
+                padding: 40px 5px;
+            }
+        }
+        nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            width: 95%;
+            height: auto;      
+            top: 0;
+            gap: 10px; 
+            background: none;
+            color: var(--text-secondary);
+            box-shadow: none;
+            z-index: 999;
+            
+            &::before{
+                content: "";
+                display: none;
+            }
+            li:last-child{
+                width: auto;
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+            a{
+                color: var(--text-secondary);
+                // font-size: 100%;
+                width: 100%;
+                padding: 5px 20px;
+                transition: transform 0.5s ease-in;
+            }
+            a:hover{
+                /* border-bottom: 2px solid var(--text-secondary); */
+                transform: translateY(3px);
+                /* background-color: var(--text-secondary); */
+                /* color: var(--text-primary); */
+                box-shadow: inset 0 0 5px var(--text-secondary);
+            }
+            .searchBar{
+                display: none;
+            }
+        }
+        .miniNav{
+            display: none;
+        }
+        
+    } 
+}
+

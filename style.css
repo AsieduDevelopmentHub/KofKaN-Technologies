@@ -1,0 +1,452 @@
+header {
+  display: flex;
+  width: 100vw;
+  height: 50px;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+  background: var(--background);
+  border-bottom: solid 3px rgb(24, 23, 23);
+  box-shadow: 0 3px 8px black;
+  z-index: 999;
+}
+header .company {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .company .comName {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 80%;
+  color: var(--text-secondary);
+}
+header nav ul {
+  width: 80%;
+  height: calc(100dvh - 60px);
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  padding: 20px 60px;
+  background-color: var(--emerald);
+  background: url("img/workshop.png") no-repeat center center/cover;
+  box-shadow: 0 0 15px var(--button);
+  z-index: 999;
+}
+header nav ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top left, rgba(0, 0, 0, 0.8), rgba(15, 13, 15, 0.7));
+  z-index: 999;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+header nav ul .searchBar {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+header nav ul .searchBar input {
+  padding: 5px 10px;
+  padding-left: 20px;
+  font-size: 110%;
+  background: var(--text-secondary);
+  color: var(--text-primary);
+  width: 100%;
+  border-radius: 8px;
+}
+header nav ul .searchBar i {
+  position: absolute;
+  left: 8px;
+  color: var(--text-primary);
+}
+header nav ul li {
+  z-index: 1000;
+  font-weight: 600;
+}
+header nav ul a {
+  color: var(--text-primary);
+  font-size: 110%;
+  width: 110%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  padding: 5px 15px;
+}
+header nav ul a:hover {
+  border-bottom: 2px solid var(--text-primary);
+}
+header nav ul a i {
+  padding: 10px;
+  font-size: 125%;
+}
+header .miniNav {
+  display: flex;
+  gap: 15px;
+  font-size: 1.23rem;
+  padding: 10px;
+}
+header .miniNav i {
+  transition: box-shadow 0.2s ease-in-out, border-radius 0.2s ease;
+}
+header .miniNav a {
+  color: var(--text-secondary);
+}
+header .miniNav i.active, header .miniNav i:hover {
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px var(--text-secondary);
+  padding: 8px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--button);
+}
+
+footer {
+  width: 100%;
+  background: var(--text-secondary);
+  color: var(--text-add);
+  margin-bottom: 45px;
+}
+footer .stR {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+footer .stR .branding {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  text-align: right;
+}
+footer .stR input, footer .stR button {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+}
+footer h3 {
+  color: var(--text-primary);
+}
+
+.siteLinks {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.siteLinks > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+.siteLinks a {
+  color: var(--text-add);
+}
+.siteLinks i {
+  margin: 8px;
+}
+.siteLinks h3 {
+  color: var(--text-primary);
+}
+
+.socialMedia {
+  width: 100%;
+  text-align: center;
+  font-size: 120%;
+  margin: 10px;
+}
+.socialMedia i {
+  margin: 10px;
+}
+
+.copyright {
+  font-size: 110%;
+  width: 100%;
+  border-top: inset 2px var(--text-add);
+  padding: 10px;
+  text-align: center;
+}
+
+.taskbar {
+  position: fixed;
+  top: calc(100vh - 60px);
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  background: var(--background);
+  border-top: solid 3px rgb(24, 23, 23);
+  box-shadow: 0 -3px 8px black;
+}
+.taskbar a {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 90%;
+  font-weight: bold;
+  color: var(--text-secondary);
+  transition: all 0.3s ease-in-out;
+}
+.taskbar a i {
+  font-size: 140%;
+}
+.taskbar a i:hover {
+  transform: translateY(-4px);
+}
+.taskbar a:hover {
+  transform: scale(1.1);
+  color: var(--text-add);
+}
+.taskbar a:active {
+  color: var(--text-add);
+}
+.taskbar span#cartcount {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: var(--text-add);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 769px) {
+  .taskbar {
+    display: flex;
+  }
+}
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--background);
+  position: relative;
+}
+
+body {
+  width: 100%;
+  overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 15px;
+}
+
+.product-section {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  margin: auto;
+}
+
+/* Product card styling */
+.product-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 97%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Image container */
+.product-img-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 aspect ratio */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  margin: 0;
+}
+
+/* Image styling */
+.product-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* Text styling */
+.product-name {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  flex-grow: 1; /* Pushes price and button down */
+}
+
+.product-price {
+  color: var(--text-add);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+/* Button styling */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--text-secondary);
+  color: white;
+  border: none;
+  margin: 10px auto;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--text-primary);
+  color: var(--text-secondary);
+  border: inset 2px var(--text-secondary);
+  font-weight: 800;
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 115%;
+  }
+  header {
+    width: 100%;
+    height: 70px;
+    padding: 20px 0;
+    font-size: 80%;
+  }
+  header .company .comName {
+    font-size: 100%;
+    padding: 40px 5px;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 95%;
+    height: auto;
+    top: 0;
+    gap: 10px;
+    background: none;
+    color: var(--text-secondary);
+    box-shadow: none;
+    z-index: 999;
+  }
+  header nav ul::before {
+    content: "";
+    display: none;
+  }
+  header nav ul li:last-child {
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  header nav ul a {
+    color: var(--text-secondary);
+    width: 100%;
+    padding: 5px 20px;
+    transition: transform 0.5s ease-in;
+  }
+  header nav ul a:hover {
+    /* border-bottom: 2px solid var(--text-secondary); */
+    transform: translateY(3px);
+    /* background-color: var(--text-secondary); */
+    /* color: var(--text-primary); */
+    box-shadow: inset 0 0 5px var(--text-secondary);
+  }
+  header nav ul .searchBar {
+    display: none;
+  }
+  header .miniNav {
+    display: none;
+  }
+}
+:root {
+  --background: #ffffff;
+  --card-bg: #d5f4ff;
+  --hover: #3c5a72;
+  --button: #2b2b2b;
+  --grey: #1aa39f;
+  --grey1: #b33b33;
+  --text-add: #1aa39f;
+  --emerald: #181414;
+  --text-color: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #181414;
+}
+
+* {
+  font-family: "Segeo UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=style.css.map */
