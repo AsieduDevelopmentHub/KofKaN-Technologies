@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="default.js"></script>
+    <title>Contact Us - KofKaN Technologies</title>
+</head>
+<body>
+    <my-header></my-header>
+    <main>
+       <section class="contact-us usPage">
+            
+            <div class="head">
+                <h2>CONTACT US</h2>
+            </div>
+            <div class="info">
+                <p>
+                    Have a project in mind, need technical help, or want to purchase 
+                    components in bulk? Reach out to us - we are here to help and respond
+                    promptly.
+                </p>
+            </div>
+            <form action="">
+                <h3>Contact Us</h3>
+                <label for="fullname">Full Name</label>
+                <input type="text" name="fullname" id="fullname" required>
+                <label for="mail">Email Address</label>
+                <input type="email" name="mail" id="mail" required> 
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" placeholder="your message....." required></textarea>
+                <button class="cta" type="submit">Submit</button>
+            </form>
+             <address>
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i>Phone: <a href="tel:+233555555555">+233 55 555 5555</a> </li>
+                    <li><i class="fas fa-envelope"></i>Email: <a href="mailto:info@kofkantechnologies.com ">info@kofkantechnologies.com</a> </li>
+                    <li><i class="fas fa-location"></i>Location: Accra, Ghana</li>
+                    <li><i class="fas fa-clock"></i>Office Hours: Sun - Fri, 8:00AM - 6:00PM</li>
+                </ul>
+            </address>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+    AOS.init({
+      duration: 1500,
+      once: false
+    });
+    </script>
+</body>
+</html>

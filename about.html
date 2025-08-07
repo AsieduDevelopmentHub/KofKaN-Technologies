@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="default.js"></script>
+    <script src="about.js"></script>
+    <title>About - KofKaN Technologies</title>
+</head>
+<body>
+    <my-header></my-header>
+    <div class="overlay" id="overlay" onclick="showMenu()"></div>
+    <main>
+        <section class="about" id="about" data-aos="fade-up">
+            <div class="head">
+                <h2>About Us</h2>
+            </div>
+            <div class="info">
+                <p>
+                    <span>KofKaN Technologies</span> is a forward-thinking engineering company delivering advanced mechatronics solutions and intelligent system designs. From tailored academic and industrial project development to the supply of high-quality electrical, electronic, and hardware components, we serve as a reliable partner for students, startups, and engineering professionals. Our commitment to precision, innovation, and practical value powers everything we build.
+                </p>
+            </div>
+            <!-- Company Values -->
+            <div class="values-section" data-aos="fade-up">
+                <div class="values-head">
+                    <h3>Our Core Values</h3>
+                </div>
+                <div class="values-cards">
+                    <div class="value-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Innovation</h4>
+                        <p>We embrace creativity and push boundaries to deliver cutting-edge solutions.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Integrity</h4>
+                        <p>We act with honesty and transparency in all our dealings.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Collaboration</h4>
+                        <p>We work closely with clients and partners to achieve shared success.</p>
+                    </div>
+                    <div class="value-card">
+                        <i class="fas fa-cogs"></i>
+                        <h4>Excellence</h4>
+                        <p>We are committed to delivering high-quality, reliable results every time.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Company History / Timeline -->
+            <div class="history-section" data-aos="fade-up">
+                <div class="history-head">
+                    <h3>Our Journey</h3>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">KofKaN Technologies is founded with a vision to bridge the gap between academia and industry in Ghana.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-content">Launched our first mechatronics project for a local university.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">Expanded our services to include IoT integration and embedded systems programming.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">Partnered with leading tech institutions and delivered 100+ successful projects.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Section -->
+            <div class="team-section">
+                <div class="team-head">
+                    <h3>Meet the Team</h3>
+                </div>
+                <div class="team-cards">
+                    <div class="team-card" data-aos="fade-right">
+                        <img src="img/kofkan.jpg" alt="Team Member 1" title="Founder and Lead Engineer">
+                        <h4>Kofi Nkrumah Kantanka</h4>
+                        <p>Lead Engineer & Founder</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-up">
+                        <img src="img/asdev.jpg" alt="Team Member 2" title="Designer">
+                        <h4>Asiedu Minta Kwaku</h4>
+                        <p>Systems Designer</p>
+                    </div>
+                    <div class="team-card" data-aos="fade-left">
+                        <img src="img/ktk.png" alt="Team Member 3" title="Sales Manager">
+                        <h4>Kwame Asare</h4>
+                        <p>Embedded Developer</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Partners/Clients Section -->
+            <div class="partners-section" data-aos="fade-up">
+                <div class="partners-head">
+                    <h3>Our Partners & Clients</h3>
+                </div>
+                <div class="partners-logos">
+                    <img src="img/atu.jpg" alt="Accra Technical University" title="Accra Technical University">
+                    <img src="img/ait.jpg" alt="Accra Institute of Technology" title="Accra Institute of Technology">
+                    <img src="img/knust.jpeg" alt="KNUST" title="KNUST">
+                    <img src="img/ktk.png" alt="Kantanka Suaye" title="Kantanka Suaye">
+                </div>
+            </div>
+            <!-- Mission Section -->
+            <div class="mission" data-aos="zoom-in">
+                <h2>Our Mission</h2>
+                <p>
+                    To empower innovation by delivering smart, scalable and hands-on engineering solutions in a world that's increasingly connected.
+                </p>
+            </div>
+            <!-- Call to Action -->
+            <div class="cta-section" data-aos="fade-up">
+                <h3>Ready to work with us?</h3>
+                <a href="contact-us.html" class="cta-btn">Contact Us</a>
+            </div>
+        </section>
+    </main>
+    <my-footer></my-footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+    AOS.init({
+      duration: 1500,
+      once: false
+    });
+    </script>
+</body>
+</html>

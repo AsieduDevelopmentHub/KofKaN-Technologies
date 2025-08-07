@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="default.js"></script>
+    <title>Projects - KofKaN Technologies</title>
+</head>
+<body>
+    <my-header></my-header>
+    <main>
+       <section class="projects proPage" data-aos="fade-down">
+            <div class="head">
+                <h2>OUR PROJECTS</h2>
+            </div>
+            <div class="info" data-aos="zoom-in">
+                <p>
+                    We specialized in designing and building intelligent engineering systems.
+                    From final year academic projects to real-world automation and control
+                    systems, we blend creativity with practical solutions. Here is a glimse
+                    of our impactful work. 
+                </p>
+            </div>
+            <div class="projectCards">
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg1"> </div>
+                    <div class="projectInfo">
+                        <h3>Mobile Based Irrigation Systems</h3>
+                        <p>Control water pumps remotely using a smartphone and relay control.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#irrigation">View Details</a>
+                    </div>
+                </div>
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg2"> </div>
+                    <div class="projectInfo">
+                        <h3>Smart Energy Meter </h3>
+                        <p>Monitors usage of energy and sends alerts to mobile dashboard via GSM module.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#energymeter">View Details</a>
+                    </div>
+                </div>
+                <div class="projectCard"data-aos="zoom-in-up">
+                    <div class="thumbnail bg3"> </div>
+                    <div class="projectInfo">
+                        <h3>Smart Waste Sorting </h3>
+                        <p>An intelligent bin that uses sensors and servo mechanisms to sort waste automatically.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#wastesorting">View Details</a>
+                    </div>
+
+                </div>
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg4"> </div>
+                    <div class="projectInfo">
+                        <h3>IoT Soil Monitoring System </h3>
+                        <p>Tracks moisture and temperature remotely using ESP32 + Firebase for real-time data.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#IoT">View Details</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ctas">
+                <a href="projects.html">View All Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <my-footer></my-footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+    AOS.init({
+      duration: 1500,
+      once: false
+    });
+    </script>
+</body>
+</html>

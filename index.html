@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/jpg">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Home - KofKaN Technologies</title>
+</head>
+<body>
+    <!-- header bar content -->
+    <header data-aos="fade-in">
+        <a href="index.html">
+            <div class="company" data-aos="fade-right">
+                <img src="img/logo.jpg" alt="logo" class="logo">
+                <div class="comName">
+                    <h1>KofKaN</h1>
+                    <h3>Technologies</h3>
+                </div>
+            </div> 
+        </a>
+        <nav >
+            <ul id="navLinks" data-aos="fade-left">
+                <div class="searchBar">
+                    <input type="search" name="" id="search" placeholder="Enter keyword....">
+                    <i class="fas fa-search"></i>
+                </div>
+                <li><a href="index.html"><i class="fas fa-home"></i>HOME</a></li>
+                <li><a href="about.html"><i class="fas fa-circle-info"></i>ABOUT</a></li>
+                <li><a href="services.html"><i class="fas fa-handshake-angle"></i>SERVICES</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i>PROJECTS</a></li>
+                <li><a href="../shop"><i class="fas fa-shopping-bag"></i>SHOP</a></li>
+                <li><a href="contact-us.html"><i class="fas fa-phone"></i>CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="miniNav" data-aos="fade-left">
+            <i class="fas fa-search" id="searchIcon" onclick="showMenu()"></i>
+            <a href="../shop"><i class="fas fa-shopping-bag" id="cartBag"></i></a>
+            <i class="fas fa-bars-staggered" id="menu" onclick="showMenu()"></i>
+        </div>
+    </header>
+    <div class="overlay" id="overlay"></div>
+    <!-- main content -->
+    <main>
+        <!-- hero section -->
+        <section class="hero" data-aos="fade-up">
+            <div class="info" data-aos="fade-down" data-aos-delay="1000">
+                <div class="comName">
+                    <h1>KofKaN</h1>
+                    <h3>Technologies</h3>
+                </div>
+                <h2>Where Engineering Meets Intelligence</h2>
+                <p>
+                    <span>KofKaN Technologies</span> is a forward-thinking engineering company delivering advanced mechatronics solutions and intelligent system designs. From tailored academic and industrial project development to the supply of high-quality electrical, electronic, and hardware components, we serve as a reliable partner for students, startups, and engineering professionals. Our commitment to precision, innovation, and practical value powers everything we build.
+                </p>
+            </div>
+            <div class="ctas">
+                <a href="projects.html">Explore Projects</a>
+                <a href="shop">Shop Now</a>
+            </div>
+        </section>
+        
+        <!-- About section -->
+        <section class="about" id="about" data-aos="fade-left">
+            <div class="head">
+                <h2>ABOUT</h2>
+            </div>
+            <div class="info">
+                <p>
+                    <span>KofKaN Technologies</span> is a cutting-edge provider
+                    of mechatronics, electronics and intelligent system solutions.
+                    We design anf deliver custom-built projects, offer high-quality 
+                    hardware and components, and work closely with students, startups 
+                    and enterprises to turn ideas into working systems. With a strong
+                    focus on precision, innovation and real-world application, we bring
+                    technology closer to those who build.
+                </p>
+            </div>
+            <div class="abtCards">
+                <div class="abtCard" data-aos="fade-right">
+                    <div class="icon-int">
+                        <i class="fas fa-tools"></i>
+                        <h2 id="proCount">0+</h2>
+                    </div>
+                    <div class="textInfo">
+                        <h3>Projects Completed</h3>
+                    </div>
+                </div>
+                <div class="abtCard" data-aos="fade-up">
+                    <div class="icon-int">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2 id="yrCount">0+</h2>
+                    </div>
+                    <div class="textInfo">
+                        <h3>Years Supporting Clients</h3>
+                    </div>
+                </div>
+                <div class="abtCard" data-aos="fade-left">
+                    <div class="icon-int">
+                        <i class="fas fa-handshake"></i>
+                        <h2 id="cusCount">0+</h2>
+                    </div>
+                    <div class="textInfo">
+                        <h3>Satisfied Partners & Client</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mission" data-aos="zoom-in">
+                <h2>Our Mission</h2>
+                <p>
+                    "To empower innovation by delivering smart, scalable 
+                    and hands-on engineering solutions in a world that's 
+                    increasingly connected."
+                </p>
+            </div>
+            <div class="clients" id="clients">
+                <div class="slides" id="slides" data-aos="fade-left">
+                <div class="client slide" data-aos="fade-left">
+                    <div class="logo">
+                        <img src="img/atu.jpg" alt="Accra Technical University" class="logo">
+                    </div>
+                    <div class="clientInfo">
+                        <h3>Accra Technical University</h3>
+                    </div>
+                </div>
+                <div class="client slide"data-aos="fade-left">
+                    <div class="logo">
+                        <img src="img/ait.jpg" alt="Accra Institute of Technology" class="logo">
+                    </div>
+                    <div class="clientInfo">
+                        <h3>Accra Institute of Technology</h3>
+                    </div>
+                </div>
+                <div class="client slide"data-aos="fade-left">
+                    <div class="logo">
+                        <img src="img/knust.jpeg" alt="Kwame Nkrumah University of Science and Technology" class="logo">
+                    </div>
+                    <div class="clientInfo">
+                        <h3>Kwame Nkrumah University of Science and Technology</h3>
+                    </div>
+                </div>
+                <div class="client slide"data-aos="fade-left">
+                    <div class="logo">
+                        <img src="img/ktk.png" alt="Kantanka Suaye" class="logo">
+                    </div>
+                    <div class="clientInfo">
+                        <h3>Kantanka Suaye Center</h3>
+                    </div>
+                </div>
+            </div>
+            </div>
+           <div class="dots" id="dots" data-aos="flip-up"></div>
+           <div class="ctas">
+               <a href="about.html">Meet the Team</a>
+           </div>
+        </section>
+
+        <!-- Services section -->
+        <section class="services" data-aos="fade-right">
+            <div class="head">
+                <h2>OUR SERVICES</h2>
+            </div>
+            <div class="info">
+                <p>
+                    At <span>KofKaN Technologies,</span> we offer a range of
+                    engineering solutions -- from hands-on project design to hardware 
+                    supplies -- tailored to students, startups and businesses.
+                </p>
+            </div>
+            <div class="serviceCards" data-aos="zoom-in">
+                <div class="servCard" data-aos="flip-left">
+                    <div class="icon">
+                        <i class="fab fa-dev"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Custom Project Design</h3>
+                        <p>End-to-end design of academic or corporate mechatronics systems.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-right">
+                    <div class="icon">
+                        <i class="fab fa-sellsy"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Electronics Component Sales</h3>
+                        <p>Wide range of resistors, sensors,ICs and micricontrollers.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-left">
+                    <div class="icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Hardware Tools & Kits</h3>
+                        <p>Soldering kits, development boards, multimeters, cables, etc.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-right">
+                    <div class="icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Embedded Systems Programming</h3>
+                        <p>Firmware development for Arduino, Esp32, PIC, etc.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-left">
+                    <div class="icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>CAD & Circuit Design</h3>
+                        <p>PCB design, 3D modelling for hardware enclosures.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-right">
+                    <div class="icon">
+                        <i class="fab fa-accessible-icon"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Tech Support & Consulting</h3>
+                        <p>One-on-one help for final year projetcs or prototyping.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-left">
+                    <div class="icon">
+                        <i class="fab fa-internet-explorer"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>IoT Integration Services</h3>
+                        <p>Linking hardware to cloud services like ThingSpeak or Firebase.</p>
+                    </div>
+                </div>
+                <div class="servCard" data-aos="flip-right">
+                    <div class="icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="servCardInfo">
+                        <h3>Training Workshops</h3>
+                        <p>On-demanding training in electronics, robotics and system building.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ctas">
+                <a href="services.html">Explore Services</a>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section class="projects" data-aos="fade-down">
+            <div class="head">
+                <h2>OUR PROJECTS</h2>
+            </div>
+            <div class="info" data-aos="zoom-in">
+                <p>
+                    We specialized in designing and building intelligent engineering systems.
+                    From final year academic projects to real-world automation and control
+                    systems, we blend creativity with practical solutions. Here is a glimse
+                    of our impactful work. 
+                </p>
+            </div>
+            <div class="projectCards">
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg1">
+                        <!-- <video src="img/TankVid.mp4" muted autoplay loop></video>  -->
+                    </div>
+                    <div class="projectInfo">
+                        <h3>Mobile Based Irrigation Systems</h3>
+                        <p>Control water pumps remotely using a smartphone and relay control.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#irrigation">View Details</a>
+                    </div>
+                </div>
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg2"> 
+                        <!-- <img src="img/pr2.jpg" alt="">  -->
+                    </div>
+                    <div class="projectInfo">
+                        <h3>Smart Energy Meter </h3>
+                        <p>Monitors usage of energy and sends alerts to mobile dashboard via GSM module.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#energymeter">View Details</a>
+                    </div>
+                </div>
+                <div class="projectCard"data-aos="zoom-in-up">
+                    <div class="thumbnail bg3"> </div>
+                    <div class="projectInfo">
+                        <h3>Smart Waste Sorting </h3>
+                        <p>An intelligent bin that uses sensors and servo mechanisms to sort waste automatically.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#wastesorting">View Details</a>
+                    </div>
+
+                </div>
+                <div class="projectCard" data-aos="zoom-in-up">
+                    <div class="thumbnail bg4"> </div>
+                    <div class="projectInfo">
+                        <h3>IoT Soil Monitoring System </h3>
+                        <p>Tracks moisture and temperature remotely using ESP32 + Firebase for real-time data.</p>
+                    </div>
+                    <div class="ctas">
+                        <a href="projects.html/#IoT">View Details</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ctas">
+                <a href="projects.html">View All Projects</a>
+            </div>
+        </section>
+
+        <!-- Shop section -->
+        <section class="shop" data-aos="zoom-out">
+            <div class="overlay"></div>
+            <div class="head">
+                <h2>OUR STORE</h2>
+            </div>
+            <div class="info">
+                <p>
+                    Explore our curated selection of electronic components, development boards,
+                    sensors and tools - ideal for students, makers and professional engineers.
+                    Quality products, affordable pricing.
+                </p>
+            </div>
+            <div class="productCards" data-aos="zoom-in">
+                <div class="productCard">
+                    <img src="img/planter.jpg" alt="ESP32">
+                    <div class="price">GHS125.50</div>
+                    <h3>ESP32 Dev Board</h3>
+                    <p>WiFi + Bluetooth dev board, ideal for IoT</p>
+                    <button onclick="AddToCart()">Add to Cart <i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/monitorRob.jpg" alt="Ultrasonic sensor">
+                    <div class="price">GHS125.50</div>
+                    <h3>Ultrasonic Senor</h3>
+                    <p>HC-SR04 for distance sensing</p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/drone.jpg" alt="Arduino Uno R3">
+                    <div class="price">GHS125.50</div>
+                    <h3>Arduino Uno R3</h3>
+                    <p>Official ATmega328 board with USB cable</p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/workshop.png" alt="">
+                    <div class="price">GHS125.50</div>
+                    <h3></h3>
+                    <p></p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/droneIrr.jpg" alt=""><div class="price">GHS125.50</div>
+                    <h3></h3>
+                    <p></p>
+                    <button onclick="AddToCart()">Add to Cart<i class=="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/dashboard.jpeg" alt=""><div class="price">GHS125.50</div>
+                    <h3></h3>
+                    <p></p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/ktk.png" alt=""><div class="price">GHS125.50</div>
+                    <h3></h3>
+                    <p></p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+                <div class="productCard">
+                    <img src="img/tractor.jpg" alt=""><div class="price">GHS125.50</div>
+                    <h3></h3>
+                    <p></p>
+                    <button onclick="AddToCart()">Add to Cart<i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+            <div class="ctas">
+                <a href="shop">Explore Shop</a>
+            </div>
+            <svg width="0" height="0">
+  <defs>
+    <clipPath id="folder" clipPathUnits="objectBoundingBox">
+      <path d="
+        M0.05,0 
+        H0.45 
+        C0.51,0 0.48,0.12 0.55,0.12 
+        H0.95 
+        C0.98,0.12 1,0.14 1,0.17 
+        V0.95 
+        C1,0.98 0.98,1 0.95,1 
+        H0.05 
+        C0.02,1 0,0.98 0,0.95 
+        V0.05 
+        C0,0.02 0.02,0 0.05,0 
+        Z" />
+    </clipPath>
+  </defs>
+</svg>
+        </section>
+        <!--Contact Us section -->
+        <section class="contact-us">
+            
+            <div class="head">
+                <h2>CONTACT US</h2>
+            </div>
+            <div class="info">
+                <p>
+                    Have a project in mind, need technical help, or want to purchase 
+                    components in bulk? Reach out to us - we are here to help and respond
+                    promptly.
+                </p>
+            </div>
+            <form action="">
+                <h3>Contact Us</h3>
+                <label for="fullname">Full Name</label>
+                <input type="text" name="fullname" id="fullname" required>
+                <label for="mail">Email Address</label>
+                <input type="email" name="mail" id="mail" required> 
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" required>
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" placeholder="your message....." required></textarea>
+                <button class="cta" type="submit">Submit</button>
+            </form>
+             <address>
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i>Phone: <a href="tel:+233555555555">+233 55 555 5555</a> </li>
+                    <li><i class="fas fa-envelope"></i>Email: <a href="mailto:info@kofkantechnologies.com ">info@kofkantechnologies.com</a> </li>
+                    <li><i class="fas fa-location"></i>Location: Accra, Ghana</li>
+                    <li><i class="fas fa-clock"></i>Office Hours: Sun - Fri, 8:00AM - 6:00PM</li>
+                </ul>
+            </address>
+        </section>
+    </main>
+    <footer data-aos="fade-up">
+        <div class="stR">
+        <div class="branding" data-aos="fade-left">
+            <img src="img/logo.jpg" alt="logo" class="logo">
+            <p>"Innovating through Mechatronics & intelligent Systems"</p>
+        </div>
+        <div class="newsletter" data-aos="fade-right">
+            <h3>Newsletter</h3>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="youremail@mail.com" required>
+            <button type="submit" onclick="SubmitNews()">Subscribe</button>
+        </div>
+        </div>
+        <div class="siteLinks" data-aos="zoom-in">
+            <div class="companyLinks">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html"><i class="fas fa-circle-info"></i>About</a></li>
+                    <li><a href="services.html"><i class="fas fa-handshake-angle"></i>Services</a></li>
+                    <li><a href="projects.html"><i class="fas fa-code"></i>Projects</a></li>
+                    <li><a href="contact-us.html"><i class="fas fa-phone"></i>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="supportLinks">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="faqs.html"><i class="fas fa-question"></i>FAQs</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-lock"></i>Privacy Policy</a></li>
+                    <li><a href="terms.html"><i class="fas fa-gavel"></i>Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="shopLinks">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="../shop"><i class="fas fa"></i>All Products</a></li>
+                    <li><a href="../shop/checkout.html"><i class="fas fa"></i>Checkout</a></li>
+                    <li><a href="../shop/order.html"><i class="fas fa"></i>Track Order</a></li>
+                </ul>
+            </div>          
+        </div>
+       
+        <div class="socialMedia">
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-github"></i>
+        </div>       
+        <div class="copyright">
+            <kbd>&copy 2025 KofKaN Technologies. All rights reserved.</kbd>
+        </div> 
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+      duration: 1500,
+      once: false
+    });
+  </script>
+</body>
+</html>
