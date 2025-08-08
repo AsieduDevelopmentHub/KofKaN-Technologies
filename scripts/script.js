@@ -13,9 +13,13 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 const errorMsg = document.getElementById("errorMsg");
-
-let UserCart = [];
+const cart = document.getElementById("cartcount") || document.querySelector("#cartBag span");
+const UserCart = JSON.parse(localStorage.getItem("UserCart")) || [];  
+const cartCount = UserCart.length || 0;
+cart.textContent = cartCount;
 let totalAmount = UserCart.reduce((sum, item) => sum + Number(item.productPrice), 0);
+
+
 
 function addToCart(productName, productPrice, productImg) {
   UserCart.push({
@@ -30,13 +34,15 @@ function addToCart(productName, productPrice, productImg) {
 function createProductCard(product) {
   return `
     <div class="product-card">
-      <div class="product-img-container">
-        <img class="product-img" src="${product.img}" alt="${product.productName}">
+      <div onclick="viewProduct('${product.id}')" title="${product.productName}" class="product-details">
+        <div class="product-img-container">
+          <img class="product-img" src="${product.img}" alt="${product.productName}">
+        </div>
+        <h3 class="product-name">${product.productName}</h3>
+        <p class="product-price">GHS ${Number(product.productPrice).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+        <p class="product-desc">${product.description}</p>
+        <p class="product-quantity"><strong>Status:</strong> ${product.quantity}</p>
       </div>
-      <h3 class="product-name">${product.productName}</h3>
-      <p class="product-price">GHS ${Number(product.productPrice).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
-      <p class="product-desc">${product.description}</p>
-      <p class="product-quantity"><strong>Status:</strong> ${product.quantity}</p>
       <button class="add-to-cart-btn" onclick="addToCart('${product.productName.replace(/'/g, "\\'")}', ${product.productPrice}, '${product.img}')">Add to Cart</button>
     </div>
   `;
@@ -49,6 +55,7 @@ function fetchAndRenderProducts() {
     const products = [];
     snapshot.forEach(doc => {
       const data = doc.data();
+      data.id = doc.id; 
       products.push(data);
     });
 
@@ -61,6 +68,10 @@ function fetchAndRenderProducts() {
     if (errorMsg) errorMsg.textContent = "Failed to load products.";
     console.error(err);
   });
+}
+
+function viewProduct(productId) {
+  window.location.href = `pages/product.html?id=${productId}`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {

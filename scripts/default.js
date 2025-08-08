@@ -10,12 +10,12 @@ class MyHeader extends HTMLElement {
                 </div>
             </div>
         </a>
+        <div class="searchBar" data-aos="fade-up">
+            <input type="search" id="search" placeholder="Enter keyword....">
+            <i class="fas fa-search"></i>
+        </div>
         <nav>
             <ul id="navLinks" data-aos="fade-left">
-                <li class="searchBar">
-                    <input type="search" id="search" placeholder="Enter keyword....">
-                    <i class="fas fa-search"></i>
-                </li>
                 <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i>Cart
                 <span id="cartcount"></span>
                 </a></li>

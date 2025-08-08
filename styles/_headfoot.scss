@@ -3,23 +3,49 @@ header{
     width: 100vw;
     height: 50px;
     position: sticky;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    gap: 20px;
     align-items: center;
     padding: 30px 10px;
-    background: var(--background);
-    border-bottom: solid 3px rgb(24, 23, 23);
-    box-shadow: 0 3px 8px black;
     z-index: 999;
     .company{
         display: flex;
+        height: 70px;
         align-items: center;
         gap: 15px;
         .comName{
             font-family: 'Segoe UI', sans-serif;
             font-size: 80%;
             color: var(--text-secondary);
+           
         }
     }
+    .searchBar{
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            input{
+                padding: 5px 10px;
+                padding-left: 25px;
+                font-size: 110%;
+                background: transparent;
+                color: var(--text-secondary);
+                width: 80%;
+                border-radius: 20px;
+                border: solid 2px var(--text-secondary);
+                transition: all 0.3s ease-in-out;
+                margin: 0 auto;
+                position: relative
+                }
+            i{
+                position: absolute;
+                // left: 8px;
+                color: var(--text-secondary);
+            }
+        }
     nav ul{
         width: 80%;
         height: calc(100dvh - 60px);
@@ -43,28 +69,6 @@ header{
             background: linear-gradient(to top left, rgba(0,0,0,0.8), rgba(15,13,15,0.7));
             z-index: 999;
             backdrop-filter: blur(5px);
-        }
-        .searchBar{
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            input{
-                padding: 5px 10px;
-                padding-left: 20px;
-                font-size: 110%;
-                background: var(--text-secondary);
-                color: var(--text-primary);
-                width: 100%;
-                border-radius: 8px;
-                }
-            i{
-                position: absolute;
-                left: 8px;
-                color: var(--text-primary);
-            }
         }
         li{
             z-index: 1000;
