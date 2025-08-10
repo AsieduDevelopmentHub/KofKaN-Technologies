@@ -33,7 +33,7 @@ header{
                 font-size: 110%;
                 background: transparent;
                 color: var(--text-secondary);
-                width: 80%;
+                width: 100%;
                 border-radius: 20px;
                 border: solid 2px var(--text-secondary);
                 transition: all 0.3s ease-in-out;
@@ -42,8 +42,9 @@ header{
                 }
             i{
                 position: absolute;
-                // left: 8px;
+                left: 8px;
                 color: var(--text-secondary);
+                margin: auto
             }
         }
     nav ul{

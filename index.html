@@ -18,11 +18,14 @@
   <my-taskbar></my-taskbar>
   <my-header></my-header>
   <main>
-    <div id="errorMsg"></div>
-    <div dataTarget="home" class="product-section"></div>
+    <div id="errorMsg" data-aos="zoom-in"></div>
+    <div class="productDetails" id="productDetails" data-aos="fade-up"></div>
+    <div class="cart-section"></div>
+    <div dataTarget="home" class="product-section" data-aos="zoom-out"></div>
   </main>
   <my-footer></my-footer>
 
+  <script src="scripts/firebase.js"></script>
   <script src="scripts/script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
