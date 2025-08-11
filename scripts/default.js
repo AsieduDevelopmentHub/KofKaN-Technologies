@@ -16,7 +16,7 @@ class MyHeader extends HTMLElement {
         </div>
         <nav>
             <ul id="navLinks" data-aos="fade-left">
-                <li><a href="#"><i class="fas fa-shopping-cart"></i>Cart
+                <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i>Cart
                 <span id="cartcount"></span>
                 </a></li>
                 <li><a href="../shop"><i class="fas fa-user"></i>Account</a></li>

@@ -3,13 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="../style.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <title>Shopping Cart - KofKaN Technologies</title>
+    <style>
+        body {
+            font-family: sans-serif, Arial;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    Hello, this is the cart page.
-    <p>Here you can view and manage your shopping cart items.</p>
-    <p>Make sure to check out the items you have added.</p> 
-    <p>For any assistance, please contact our support team.</p>
-    <p>Thank you for shopping with us!</p>
+    <div class="clearCart">
+        <h2 onclick="clearCart()"><i class="fas fa-xmark"></i>Clear Cart</h2>
+    </div>
+    <div class="cart-section">
+        <h2>Shopping Cart</h2>
+        <div class="cart-items"></div>
+        <div class="cart-total"></div>
+    </div>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/cart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 1500,
+        once: false
+    });
+    </script>
 </body>
 </html>

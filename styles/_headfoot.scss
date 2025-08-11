@@ -192,7 +192,7 @@ footer{
 
 .taskbar{
     position: fixed;
-    top: calc(100vh - 60px);
+    top: calc(100dvh - 60px);
     bottom: 0;
     display: flex;
     justify-content: space-evenly;

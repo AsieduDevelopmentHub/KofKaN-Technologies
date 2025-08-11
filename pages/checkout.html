@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KofKan Technologies | Shop/Checkout</title>
+    <title>Checkout - KofKaN Technologies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="../scripts/checkout.js"></script>
+    <script src="../scripts/firebase.js"></script>
+
+    <style>
+        body {
+            font-family: sans-serif, Arial;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+      .checkout-form {
+        margin-top: 30px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        max-width: 400px;
+      }
+      .checkout-form label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+      }
+      .checkout-form input, .checkout-form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      .checkout-form button {
+        width: 100%;
+        padding: 10px;
+        background: var(--text-secondary);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .checkout-form button:hover {
+        background: #070707;
+      }
+    </style>
 </head>
 <body>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum placeat voluptatem consequatur eius dicta cumque laboriosam molestias inventore accusantium esse perspiciatis temporibus qui, debitis libero tempore sed! A, rerum ullam!
+  <div id="checkout-content"></div>
+  <form class="checkout-form" id="userCheckoutForm">
+    <h3>Receiver Information</h3> <br>
+    <label for="username">Full Name</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="houseaddress">Residential Address</label>
+    <textarea id="houseaddress" name="houseaddress" rows="2" required></textarea>
+
+    <label for="digitaladdress">Postal/Digital Address</label>
+    <textarea id="digitaladdress" name="digitaladdress" rows="2" required></textarea>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}">
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="button" onclick="payment()">Proceed payment</button>
+  </form>
 </body>
 </html>
