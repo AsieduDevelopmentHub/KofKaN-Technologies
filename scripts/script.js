@@ -102,11 +102,20 @@ function viewProduct(productId) {
   window.location.href = `pages/product.html?id=${productId}`;
 }
 
-function clearCart() {
-  localStorage.removeItem("UserCart");
-  if (cart) cart.textContent = "0";
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   fetchAndRenderProducts();
+});
+
+auth.onAuthStateChanged(user => {
+  if (user) {
+    // document.getElementById("userName").textContent = user.displayName || 'Account';
+    db.collection("users").doc(user.uid).get().then(doc => {
+      if (doc.exists) {
+        document.getElementById("userName").textContent = user.displayName || 'Account';
+        const data = doc.data();
+         document.getElementById("userName").textContent = data.name || 'Account';
+         document.getElementById("userName1").textContent = data.name || 'Account';
+      }
+    });
+  }
 });

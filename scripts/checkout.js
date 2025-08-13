@@ -42,11 +42,11 @@ function payment(){
   if (!email) return alert('Please enter valid email.');
 
   const handler = PaystackPop.setup({
-    key: 'pk_test_6f9c999272ed71149c0799dc2a690d23a31ed9a1',
+    key: 'pk_test_57afcffcb3978abfdad6c22623fe2e816d452d21',
     email: email,
     amount: totalAmount * 100, // Convert to GHS
     currency: 'GHS',
-    ref: 'KofKaN' + Math.floor(Math.random() * 9849000 + 1),
+    ref: 'KOFKAN-' + Math.floor(Math.random() * 98249000 + 1),
     metadata: {
       custom_fields: UserCart.map(item =>({
         display_name: item.productName,
@@ -55,7 +55,7 @@ function payment(){
       }))
     },
     callback: function(response){
-      alert('Payment complete! Reference: '+ response.reference);
+      alert('Payment completed \nPayment Reference: '+ response.reference + '\nOrder placed successfully!');
       updateDatabase();
       UserCart =[];
       totalAmount = 0;
@@ -81,6 +81,7 @@ function updateDatabase() {
     const UserCart = JSON.parse(localStorage.getItem("UserCart")) || [];
     const total = UserCart.reduce((sum, item) => sum + (Number(item.productPrice) * Number(item.quantity)), 0);
 
+    const user = auth.currentUser;
     const orderData = {
     username,
     houseaddress,
@@ -91,12 +92,17 @@ function updateDatabase() {
     total,
     createdAt: new Date().toISOString()
     };
-
-    firebase.firestore().collection("orders").add(orderData)
+    
+    db.collection("orders").add(orderData)
+    
     .then(() => {
-        alert("Order placed successfully!");
         localStorage.removeItem("UserCart");
         window.location.href = "../pages/thankyou.html";
+        if (user){
+        return db.collection('users').doc(user.uid).update({
+          address: houseaddress + '\n' + digitaladdress + '\n' + phone,
+      });
+    }
     })
     .catch(error => {
         alert("Failed to load payment" + error.message);

@@ -19,7 +19,7 @@ class MyHeader extends HTMLElement {
                 <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i>Cart
                 <span id="cartcount"></span>
                 </a></li>
-                <li><a href="../shop"><i class="fas fa-user"></i>Account</a></li>
+                <li><a href="pages/user.html"><i class="fas fa-user"></i><span  id="userName"></span></a></li>
             </ul>
         </nav>
          <div class="miniNav" data-aos="fade-left">
@@ -121,7 +121,7 @@ class MyTaskbar extends HTMLElement {
             </a>
         </div>
         <div class="TBicons">
-            <a href=""><i class="fas fa-user"></i>Account</a>
+            <a href="pages/user.html"><i class="fas fa-user"></i><span  id="userName1"></span></a>
         </div>
     </section>`;
   }

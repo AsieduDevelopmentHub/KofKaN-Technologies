@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information - KofKan Technologies</title>
+    <link rel="shortcut icon" href="../assets/img/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+      .account-container {
+        max-width: 500px;
+        margin: 40px auto;
+        background: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        padding: 30px;
+      }
+      .account-title {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--text-secondary, #333);
+      }
+      .account-info {
+        margin-bottom: 25px;
+      }
+      .account-label {
+        font-weight: 600;
+        color: var(--text-secondary, #555);
+      }
+      .account-value {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        display: block;
+        opacity: 0.8;
+      }
+      .logout-btn {
+        background: var(--text-secondary);
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 20px;
+      }
+      .logout-btn:hover {
+        background: #0e0d0d;
+      }
+      .account-message {
+        color: var(--text-add);
+        font-weight: 600;
+        margin-top: 20px;
+        align-items: center;
+      }
+    </style>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../scripts/firebase.js"></script>
+</head>
+<body>
+  <div class="account-container" id="accountContainer">
+    <div class="account-title">My Account</div>
+    <div class="account-info">
+      <span class="account-label">Username:</span>
+      <span class="account-value" id="accountUsername">Loading...</span>
+      <span class="account-label">Email:</span>
+      <span class="account-value" id="accountEmail">Loading...</span>
+      <span class="account-label">Address:</span>
+      <span class="account-value" id="accountAddress">Loading...</span>
+    </div>
+    <button class="logout-btn" id="signinButton">Sign In</button>
+    <button class="logout-btn" id="logoutButton">Logout</button>
+    <div class="account-message" id="accountMessage"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const accountUsername = document.getElementById('accountUsername');
+      const accountEmail = document.getElementById('accountEmail');
+      const accountAddress = document.getElementById('accountAddress');
+      const signinButton = document.getElementById('signinButton');
+      const logoutButton = document.getElementById('logoutButton');
+      const accountMessage = document.getElementById('accountMessage');
+
+      auth.onAuthStateChanged(user => {
+        if (user) {
+          // User is signed in, fetch and display account information
+          // accountUsername.textContent = user.displayName || user.email;
+
+          db.collection("users").doc(user.uid).get().then(doc => {
+            if (doc.exists) {
+              const data = doc.data();
+              accountUsername.textContent = data.name;
+              accountEmail.textContent = user.email;
+              accountAddress.textContent = data.address || 'No address provided';
+            } else {
+              accountEmail.textContent = user.email;
+              accountAddress.textContent = 'No address found for user.';
+            }
+          });
+        } else {
+          // No user is signed in, redirect to login or show a message
+          accountMessage.textContent = 'You are not logged in. Please log in to view your account information.';
+          // setTimeout(() => {
+            // alert('Create an account or log in to access your account information.');
+            // window.location.href = '../login.html';
+          // }, 3000);
+        }
+      });
+
+      logoutButton.addEventListener('click', () => {
+        auth.signOut().then(() => {
+          accountMessage.textContent = 'You have been logged out successfully.';
+          setTimeout(() => {
+            window.location.href = '../pages/user.html';
+          }, 2000);
+        }).catch(error => {
+          accountMessage.textContent = 'Error logging out: ' + error.message;
+        });
+      });
+    });
+    signinButton.addEventListener('click', () => {
+        accountMessage.textContent = 'Redirecting to sign in page...';
+        setTimeout(() => {
+        window.location.href = '../pages/login.html';
+        }, 2000);
+    });
+  </script>
+</body>
+</html>
