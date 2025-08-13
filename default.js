@@ -20,13 +20,13 @@ class MyHeader extends HTMLElement {
                 <li><a href="about.html"><i class="fas fa-circle-info"></i>ABOUT</a></li>
                 <li><a href="services.html"><i class="fas fa-handshake"></i>SERVICES</a></li>
                 <li><a href="projects.html"><i class="fas fa-code"></i>PROJECTS</a></li>
-                <li><a href="../shop"><i class="fas fa-shopping-bag"></i>SHOP</a></li>
+                <li><a href="https://shop.kofkantechnologies.com/"><i class="fas fa-shopping-bag"></i>SHOP</a></li>
                 <li><a href="contact-us.html"><i class="fas fa-phone"></i>CONTACT</a></li>
             </ul>
         </nav>
          <div class="miniNav" data-aos="fade-left">
             <i class="fas fa-search" id="searchIcon" onclick="showMenu()"></i>
-            <a href="../shop"><i class="fas fa-shopping-bag" id="cartBag"></i></a>
+            <a href="https://shop.kofkantechnologies.com/"><i class="fas fa-shopping-bag" id="cartBag"></i></a>
             <i class="fas fa-bars-staggered" id="menu" onclick="showMenu()"></i>
         </div>
     </header>
@@ -83,9 +83,9 @@ class MyFooter extends HTMLElement {
             <div class="shopLinks">
                 <h3>Shop</h3>
                 <ul>
-                    <li><a href="../shop"><i class="fas fa"></i>All Products</a></li>
-                    <li><a href="../shop/checkout.html"><i class="fas fa"></i>Checkout</a></li>
-                    <li><a href="../shop/order.html"><i class="fas fa"></i>Track Order</a></li>
+                    <li><a href="https://shop.kofkantechnologies.com/"><i class="fas fa"></i>All Products</a></li>
+                    <li><a href="https://shop.kofkantechnologies.com/pages/checkout.html"><i class="fas fa"></i>Checkout</a></li>
+                    <li><a href="https://shop.kofkantechnologies.com/pages/order.html"><i class="fas fa"></i>Track Order</a></li>
                 </ul>
             </div>          
         </div>
