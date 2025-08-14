@@ -53,6 +53,13 @@
 <body>
     <div class="container">
         <div class="auth-container">
+            <!-- Add your company logo/branding -->
+            <div class="text-center mb-4">
+                <img src="../assets/img/logo.jpg" alt="KofKaN Technologies Logo" style="width: 120px; margin-bottom: 15px; border-radius: 50%; box-shadow: 0 0 12px rgba(0,0,0,0.3);">
+                <h2>Welcome to KofKaN Shop</h2>
+                <p class="text-muted">Sign in to access your account</p>
+            </div>
+    
             <!-- Sign In Section -->
             <div id="signinSection">
                 <h2 class="text-center mb-4">Sign In</h2>
@@ -66,7 +73,7 @@
                         <input type="password" class="form-control" id="signinPassword" required>
                     </div>
                     <div class="fogotPassword">
-                        <a href="#" id="forgotPassword">Forgot password</a>
+                        <a href="" id="forgotPassword">Forgot password</a>
                     </div>
                     <button type="submit" class="btn btn-secondary">Sign In</button>
                 </form>
@@ -102,6 +109,12 @@
                 </div>
             </div>
             
+            <div class="text-center mt-3">
+                <p>By signing in, you agree to our 
+                    <a href="../pages/terms.html">Terms of Service</a> and 
+                    <a href="../pages/privacy.html">Privacy Policy</a>
+                </p>
+            </div>
             <!-- Alert Messages -->
             <div class="alert alert-success" id="successAlert"></div>
             <div class="alert alert-danger" id="errorAlert"></div>
