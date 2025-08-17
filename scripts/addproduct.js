@@ -1,10 +1,10 @@
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
-const serviceAccount = require('../json/ServiceAccount.json'); // Make sure this path matches your file
+const serviceAccount = require('./kofkantechnologies.json'); // Make sure this path matches your file
 
 initializeApp({
   credential: cert(serviceAccount),
-  projectId: 'kofkantechnologies',
+  projectId: 'kofkantechnology',
 });
 
 const dbSet = getFirestore();

@@ -19,7 +19,7 @@ class MyHeader extends HTMLElement {
                 <li><a href="pages/cart.html"><i class="fas fa-shopping-cart"></i>Cart
                 <span id="cartcount"></span>
                 </a></li>
-                <li><a href="pages/user.html"><i class="fas fa-user"></i><span  id="userName"></span></a></li>
+                <li><a href="pages/user.html"><i class="fas fa-user"></i><span id="userName"></span></a></li>
             </ul>
         </nav>
          <div class="miniNav" data-aos="fade-left">

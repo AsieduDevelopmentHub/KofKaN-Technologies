@@ -1,11 +1,12 @@
 //firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB3DRcXaAfxadmKEejs3vyynvpxErzFtLY",
-  authDomain: "kofkantechnologies.firebaseapp.com",
-  projectId: "kofkantechnologies",
-  storageBucket: "kofkantechnologies.firebasestorage.app",
-  messagingSenderId: "651853937548",
-  appId: "1:651853937548:web:e62fcf94c9548597e674a9"
+  apiKey: "AIzaSyBiGG34jrpMqMbjs1ObSfFd4Ix_4iRLKtU",
+  authDomain: "kofkantechnology.firebaseapp.com",
+  projectId: "kofkantechnology",
+  storageBucket: "kofkantechnology.firebasestorage.app",
+  messagingSenderId: "1063516586033",
+  appId: "1:1063516586033:web:8f95331387b4dafee31510",
+  measurementId: "G-6YJLR3646X"
 };
 
 firebase.initializeApp(firebaseConfig);

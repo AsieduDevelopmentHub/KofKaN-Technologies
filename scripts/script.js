@@ -117,5 +117,8 @@ auth.onAuthStateChanged(user => {
          document.getElementById("userName1").textContent = data.name || 'Account';
       }
     });
+  } else{
+    document.getElementById("userName").textContent = 'Account';
+    document.getElementById("userName1").textContent = 'Account';
   }
 });
