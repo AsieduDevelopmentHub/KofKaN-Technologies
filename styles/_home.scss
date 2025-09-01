@@ -551,66 +551,112 @@ section{
     }
     
 }
-.productCards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
+.product-section {
     width: 100%;
-    text-align: center;
-    .productCard{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-bottom: 20px;
-        box-shadow:inset 0 0 5px var(--button);
-        border-radius: 8px;
-           img{
-            width: 100%;
-            max-width: 320px;
-            aspect-ratio: 3 / 4;
-            background-color: var(--emerald);
-            clip-path: url(#folder);
-            -webkit-clip-path: url(#folder);
-            transition: scale 0.5s ease, box-shadow 0.3s ease;
-            object-fit: cover;
-            position: relative;
-            box-shadow:inset 0 0 5px var(--button);
-            scale: 0.95;
-           }
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+}
 
-           img:hover {
-              scale: 0.98;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-            }
-            .price{
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                right: 2%;
-                top: 2%;
-                width: 47%;
-                height: 8.5%;
-                padding: 5px 7px;
-                font-weight: bold;
-                border-bottom-left-radius: 15px;
-                border-top-right-radius: 10px;
-                background: var(--button);
-                color: var(--text-primary);
-            }
-            button{
-                padding: 8px;
-                border-radius: 8px;
-                margin: 10px auto;
-                background: var(--text-secondary);
-                box-shadow:inset 0 0 5px var(--button);
-                border: none;
-                color: var(--text-primary);
-                font-weight: bold;
-            }
-    
+/* Product card styling */
+.product-card {
+    background: rgb(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2), 0 -2px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
+}
+/* Image container */
+.product-img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f9fa;
+    margin: 0;
+    i{
+        position: absolute;
+        bottom: 10px;
+        right: 2px;
+        color: var(--text-secondary);
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        border-radius: 50%;
+        padding: 7px;
+        border: 2px solid var(--text-secondary);
+        &:hover {
+            color: var(--text-add);
+            transform: scale(1.05);
+            border: 2px solid var(--text-add);
+        }
+        z-index: 999;
     }
-    
+}
+.product-details{
+    z-index: 980;
+}
+.product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* Text styling */
+.product-name {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+    flex-grow: 1; /* Pushes price and button down */
+}
+
+.product-price {
+    color: var(--text-add);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    background: var(--text-secondary);
+    color: white;
+    border: none;
+    margin: 10px auto;
+    border-radius: 6px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    a{
+        color: var(--text-primary);
+    }
+}
+
+.add-to-cart-btn:hover {
+    background: var(--text-primary);
+    border: inset 2px var(--text-secondary);
+    a{
+        color: var(--text-secondary);
+    }
 }
 
 .contact-us{

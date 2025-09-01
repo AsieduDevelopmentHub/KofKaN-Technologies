@@ -91,7 +91,7 @@ class MyFooter extends HTMLElement {
         </div>
        
         <div class="socialMedia">
-            <i class="fab fa-whatsapp"></i>
+            <a href="wa.me/233550783777"><i class="fab fa-whatsapp"></i></a>
             <i class="fab fa-linkedin-in"></i>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-github"></i>
